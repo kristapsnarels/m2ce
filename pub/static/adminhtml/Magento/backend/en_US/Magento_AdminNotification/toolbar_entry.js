@@ -1,0 +1,1 @@
+/Users/dz622/Documents/localProjects/m2ce/vendor/magento/module-admin-notification/view/adminhtml/web/toolbar_entry.js
