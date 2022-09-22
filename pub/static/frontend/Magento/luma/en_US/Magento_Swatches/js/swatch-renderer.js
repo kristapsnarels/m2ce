@@ -1,1 +1,0 @@
-/Users/dz622/Documents/localProjects/m2ce/vendor/magento/module-swatches/view/base/web/js/swatch-renderer.js
