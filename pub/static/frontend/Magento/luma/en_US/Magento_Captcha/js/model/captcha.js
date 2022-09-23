@@ -1,1 +1,0 @@
-/Users/dz622/Documents/localProjects/m2ce/vendor/magento/module-captcha/view/frontend/web/js/model/captcha.js
