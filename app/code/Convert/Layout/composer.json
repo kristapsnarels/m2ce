@@ -1,0 +1,14 @@
+{
+    "name": "convert/module-layout",
+    "description": "Training module to learn basics of frontend layout modifications",
+    "type": "magento2-module",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Convert\\Layout\\": ""
+        }
+    }
+}
