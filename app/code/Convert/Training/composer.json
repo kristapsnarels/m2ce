@@ -1,0 +1,14 @@
+{
+    "name": "convert/module-training",
+    "description": "Training module to learn basics of Magento development",
+    "type": "magento2-module",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Convert\\Training\\": ""
+        }
+    }
+}
