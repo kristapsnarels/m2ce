@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13845b41e917adc3d1c8ab4330e88e30",
+    "content-hash": "701e0b7c08edbe03d10422651f30c4b6",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -5054,6 +5054,56 @@
                 }
             ],
             "time": "2022-04-17T13:12:02+00:00"
+        },
+        {
+            "name": "limesharp/stockists",
+            "version": "2.0.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ClaudiuCreanga/magento2-store-locator-stockists-extension.git",
+                "reference": "31f58749ba76da9bc66b183d8cbdd6c64dfa22b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ClaudiuCreanga/magento2-store-locator-stockists-extension/zipball/31f58749ba76da9bc66b183d8cbdd6c64dfa22b5",
+                "reference": "31f58749ba76da9bc66b183d8cbdd6c64dfa22b5",
+                "shasum": ""
+            },
+            "require": {
+                "magento/product-community-edition": "^2.1.0",
+                "php": "7.0.2|7.0.4|~7.0.6|~7.1.0|~7.2.0|~7.3.10|~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "src/registration.php"
+                ],
+                "psr-4": {
+                    "Limesharp\\Stockists\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Claudiu Creanga",
+                    "email": "claudiu@limesharp.net",
+                    "homepage": "http://claudiucreanga.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a stockists store locator extension for magento2",
+            "homepage": "https://github.com/ClaudiuCreanga/magento2-stockists-extension",
+            "keywords": [
+                "google maps",
+                "magento",
+                "magento2",
+                "stockists",
+                "store locator"
+            ],
+            "time": "2021-01-14T19:50:29+00:00"
         },
         {
             "name": "magento/adobe-ims",
