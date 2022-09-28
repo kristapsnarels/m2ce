@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Convert Team
+ * @copyright Copyright (c) Convert (https://www.convert.no)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Hiding Short Description block -->
+        <referenceBlock name="product.info.overview" display="false" />
+        <!-- Moving Description after Image -->
+        <move element="product.info.description" destination="product.info.media" after="product.info.media.image" />
+        <!-- Removing Details block -->
+        <referenceBlock name="product.info.details" remove="true" />
+        <!-- Adding custom subtitle attribute block after title -->
+        <referenceBlock name="product.info.main">
+            <block
+                class="Magento\Catalog\Block\Product\View\Description"
+                name="product.info.subtitle"
+                template="Magento_Catalog::product/view/attribute.phtml"
+                before="-"
+            >
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getSubtitle</argument>
+                    <argument name="at_code" xsi:type="string">subtitle</argument>
+                    <argument name="css_class" xsi:type="string">subtitle</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <!-- Adding custom external URL attribute block before description -->
+        <referenceContainer name="content">
+            <block
+                class="Magento\Catalog\Block\Product\View\Description"
+                name="product.info.external_url"
+                template="Magento_Catalog::product/view/attribute.phtml"
+                before="product.info.description"
+            >
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getExternalUrl</argument>
+                    <argument name="at_code" xsi:type="string">external_url</argument>
+                    <argument name="css_class" xsi:type="string">external_url</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
