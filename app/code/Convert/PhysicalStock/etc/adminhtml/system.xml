@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Convert Team
+ * @copyright Copyright (c) Convert (https://www.convert.no)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="convert" translate="label" sortOrder="10">
+            <label>Convert</label>
+        </tab>
+
+        <section id="physical_stock" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>convert</tab>
+            <label>Physical Stock</label>
+            <resource>Convert_PhysicalStock::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

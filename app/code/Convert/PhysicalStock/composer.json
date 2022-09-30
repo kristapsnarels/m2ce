@@ -1,0 +1,14 @@
+{
+    "name": "convert/module-physical-stock",
+    "description": "Provides information about physical quantity of the product in a physical store",
+    "type": "magento2-module",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Convert\\PhysicalStock\\": ""
+        }
+    }
+}
