@@ -1,0 +1,31 @@
+<?php
+/**
+ * @author Convert Team
+ * @copyright Copyright (c) Convert (https://www.convert.no/)
+ */
+
+declare(strict_types=1);
+
+use Convert\PhysicalStock\Block\PhysicalStock;
+
+/** @var $block PhysicalStock */
+?>
+<?php if ($block->getProduct()) : ?>
+    <div data-bind="scope: 'physical_stock'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "physical_stock": {
+                            "component": "Convert_PhysicalStock/js/product/view/physical_stock",
+                            "productId": "<?= $block->getProduct()->getId() ?>"
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<?php endif;

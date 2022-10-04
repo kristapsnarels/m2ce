@@ -15,6 +15,6 @@ class StockConfigHelper extends AbstractHelper
 {
     public function isEnabled(int $storeId = null): bool
     {
-        return (bool)$this->scopeConfig->getValue('physical_stock/general/status', ScopeInterface::SCOPE_STORE, $storeId);
+        return (bool)$this->scopeConfig->getValue('physical_stock/general/enabled', ScopeInterface::SCOPE_STORE, $storeId);
     }
 }
