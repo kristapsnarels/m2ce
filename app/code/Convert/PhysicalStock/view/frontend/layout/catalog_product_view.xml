@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Convert Team
+ * @copyright Copyright (c) Convert (https://www.convert.no)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+    <body>
+        <referenceContainer name="product.info.main">
+            <block name="product.info.physical_stock"
+                   class="Convert\PhysicalStock\Block\PhysicalStock"
+                   template="Convert_PhysicalStock::product/view/physical_stock.phtml"
+                   ifconfig="physical_stock/general/enabled"
+                   after="product.info.extrahint"
+            />
+        </referenceContainer>
+    </body>
+</page>

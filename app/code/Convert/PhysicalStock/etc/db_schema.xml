@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Convert Team
+ * @copyright Copyright (c) Convert (https://www.convert.no)
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table
+        name="convert_physical_stock"
+        engine="innodb"
+        resource="default"
+        comment="Saves relation with product its quantity and stockists store"
+    >
+        <column name="id" xsi:type="int" unsigned="true" identity="true"/>
+        <column name="stockist_id" xsi:type="int" unsigned="true" nullable="false"/>
+        <column name="product_id" xsi:type="int" unsigned="true" nullable="false"/>
+        <column name="quantity" xsi:type="int" unsigned="true" nullable="false" default="0"/>
+        <column name="updated_at" xsi:type="timestamp"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <!-- Not sure why but creating this FK to third party module table fails -->
+<!--        <constraint-->
+<!--            xsi:type="foreign"-->
+<!--            referenceId="STOCK_STOCKIST_ID_STOCKISTS_STORES_STOCKIST_ID"-->
+<!--            table="convert_physical_stock"-->
+<!--            column="stockist_id"-->
+<!--            referenceTable="limesharp_stockists_stores"-->
+<!--            referenceColumn="stockist_id"-->
+<!--            onDelete="CASCADE"-->
+<!--        />-->
+        <constraint
+            xsi:type="foreign"
+            referenceId="STOCK_PRODUCT_ID_PRODUCT_ENTITY_ID"
+            table="convert_physical_stock"
+            column="product_id"
+            referenceTable="catalog_product_entity"
+            referenceColumn="entity_id"
+            onDelete="CASCADE"
+        />
+    </table>
+</schema>

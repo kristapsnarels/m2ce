@@ -1,0 +1,15 @@
+{
+    "convert_physical_stock": {
+        "column": {
+            "id": true,
+            "stockist_id": true,
+            "product_id": true,
+            "quantity": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "STOCK_PRODUCT_ID_PRODUCT_ENTITY_ID": true
+        }
+    }
+}
