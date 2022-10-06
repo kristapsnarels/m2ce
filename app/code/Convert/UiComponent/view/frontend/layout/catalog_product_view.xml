@@ -33,7 +33,7 @@
             <block
                 class="Magento\Catalog\Block\Product\View\Description"
                 name="product.info.external_url"
-                template="Magento_Catalog::product/view/attribute.phtml"
+                template="Convert_UiComponent::product/view/external_url.phtml"
                 before="product.info.description"
             >
                 <arguments>
