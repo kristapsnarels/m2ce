@@ -1,0 +1,41 @@
+<?php
+/**
+ * @author Convert Team
+ * @copyright Copyright (c) Convert (https://www.convert.no/)
+ */
+
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+
+/** @var $block Template */
+$product = $block->getProduct();
+$url = $product->getData($block->getData('at_code'));
+?>
+
+<?php if ($url) :?>
+    <div class="product attribute">
+        <a class="attribute__url" href="<?= $url ?>"><?= __('External URL'); ?></a>
+        <div data-bind="scope: 'external_url'">
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        </div>
+    </div>
+<?php endif; ?>
+
+<script type="text/x-magento-init">
+    {
+        ".attribute__url": {
+            "Convert_UiComponent/js/external_url_prompt": {}
+        },
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "external_url": {
+                        "component": "Convert_UiComponent/js/external_url",
+                        "url": "<?= $url; ?>"
+                    }
+                }
+            }
+        }
+    }
+</script>

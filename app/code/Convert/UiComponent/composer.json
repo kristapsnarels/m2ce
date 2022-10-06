@@ -1,6 +1,6 @@
 {
-    "name": "convert/module-layout",
-    "description": "Training module to learn basics of frontend layout modifications",
+    "name": "convert/module-ui-component",
+    "description": "Module to train to work with Magento UI components",
     "type": "magento2-module",
     "require": {},
     "autoload": {
@@ -8,7 +8,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Convert\\Layout\\": ""
+            "Convert\\PhysicalStock\\": ""
         }
     }
 }
